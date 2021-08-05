@@ -89,3 +89,19 @@ function borrartarea4(titulo){
     }
     localStorage.setItem('favoritos4',JSON.stringify(favoritos4));
 }
+
+
+function borrartarea5(titulo){
+    alert("Se ha eliminado el tip =/");
+    favoritos5 = JSON.parse(localStorage.getItem('favoritos5'));
+    
+    for(let i = 0 ; i<favoritos5.length;i++){
+        if(favoritos5[i].titulo == titulo){
+            favoritos5.splice(i,1);
+        }
+        else if(favoritos5[i]==[]){
+            localStorage.clear();
+        }
+    }
+    localStorage.setItem('favoritos5',JSON.stringify(favoritos5));
+}

@@ -6,6 +6,18 @@ let favoritos1 = localStorage.getItem('favoritos');
 let favoritos2 = localStorage.getItem('favoritos2');
 let favoritos3 = localStorage.getItem('favoritos3');
 let favoritos4 = localStorage.getItem('favoritos4');
+let favoritos5 = localStorage.getItem('favoritos5');
+
+const obtenerFavoritos5 =()=>{
+    if(favoritos5== null){
+        array = [];
+    }
+    else{
+        array = JSON.parse(favoritos5);
+    }
+    return array;
+}
+
 
 const obtenerFavoritos4 =()=>{
     if(favoritos4== null){
@@ -104,7 +116,21 @@ const pintar2 = () =>{
     container4.innerHTML = html2;
    }
 
+   const pintar5 = () =>{
+    let lista = obtenerFavoritos5();
+    let html2 = "";  
+    lista.forEach(element => {
+        titulo = element.titulo
+        html2 += `<div class="card-body">`
+        html2 += `<h5 class="card-title">${element.titulo}</h5>`
+        html2 += `<p class="card-text">${element.parrafo}</p>`
+        html2 += `<a href="#" class="btn btn-danger" onclick="borrartarea5('${titulo}');">Eliminar tip :(</a>`
+        html2 += `</div>`
+    });
+    container5.innerHTML = html2;
+   }
 pintar();
 pintar2();
 pintar3();
 pintar4();
+pintar5();
