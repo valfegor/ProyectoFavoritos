@@ -69,7 +69,12 @@ add7.onclick = function(){
 const getData = (titulo,parrafo) =>{
     this.titulo = titulo;
     this.parrafo = parrafo;
-    
+    for(let i = 0; i<array.length;i++){
+        if(array[i].titulo==titulo){
+           return alert("ese titulo ya fue añadido a sus favoritos recargue la pagina por favor");
+        }
+    }
+
     obj={
         titulo:titulo,
         parrafo:parrafo
