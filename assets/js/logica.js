@@ -69,13 +69,14 @@ add7.onclick = function(){
 const getData = (titulo,parrafo) =>{
     this.titulo = titulo;
     this.parrafo = parrafo;
-
+    
     obj={
         titulo:titulo,
         parrafo:parrafo
     }
-
     array.push(obj);
+    
+    
     localStorage.setItem('favoritos5',JSON.stringify(array));
 
 }

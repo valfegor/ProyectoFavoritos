@@ -4,103 +4,65 @@ let add3 = document.getElementById("add3");
 let add4 = document.getElementById("add4");
 let add5 = document.getElementById("add5");
 let add6 = document.getElementById("add6");
-let add7 = document.getElementById("add7");
-console.log(add7)
+
 let obj = {}
 let array = [];
 
-
-
 add1.onclick = function(){
-    let p1 = document.getElementById('p1').textContent;
-    let t1 = document.getElementById('t1').textContent;
-    
-    obj = {
-        titulo:t1,
-        parrafo:p1
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t1").textContent;
+    let parrafo = document.getElementById("p1").textContent;
+    getData(titulo,parrafo);
 }
 
-
 add2.onclick = function(){
-    let p2 = document.getElementById('p2').textContent;
-    let t2 = document.getElementById('t2').textContent;
-    obj = {
-        titulo:t2,
-        parrafo:p2
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
-    
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t2").textContent;
+    let parrafo = document.getElementById("p2").textContent;
+    getData(titulo,parrafo);
 }
 
 add3.onclick = function(){
-    let p3 = document.getElementById('p3').textContent;
-    let t3 = document.getElementById('t3').textContent;
-    obj = {
-        titulo:t3,
-        parrafo:p3
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t3").textContent;
+    let parrafo = document.getElementById("p3").textContent;
+    console.log(titulo,parrafo)
+    getData(titulo,parrafo);
 }
 
 add4.onclick = function(){
-    let p4 = document.getElementById('p4').textContent;
-    let t4 = document.getElementById('t4').textContent;
-    obj = {
-        titulo:t4,
-        parrafo:p4
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t4").textContent;
+    let parrafo = document.getElementById("p4").textContent;
+    getData(titulo,parrafo);
 }
 
 add5.onclick = function(){
-    let p5 = document.getElementById('p5').textContent;
-    let t5 = document.getElementById('t5').textContent;
-    obj = {
-        titulo:t5,
-        parrafo:p5
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t5").textContent;
+    let parrafo = document.getElementById("p5").textContent;
+    getData(titulo,parrafo);
 }
 
 add6.onclick = function(){
-    let p6 = document.getElementById("p6").textContent;
-    let t6 = document.getElementById('t6').textContent;
-    obj = {
-        titulo:t6,
-        parrafo:p6
-    }
-
-    array.push(obj);
-    localStorage.setItem('favoritos',JSON.stringify((array)));
-
-    console.log(array); 
+    alert("titulo añadido a sus favoritos");
+    let titulo = document.getElementById("t6").textContent;
+    let parrafo = document.getElementById("p6").textContent;
+    getData(titulo,parrafo);
 }
+
+
+
 
 const getData = (titulo,parrafo) => {
     this.titulo = titulo;
     this.parrafo = parrafo;
+
+    for(let i = 0; i<array.length;i++){
+        if(array[i].titulo==titulo){
+           return alert("ese titulo ya fue añadido a sus favoritos recargue la pagina por favor");
+        }
+    }
 
     obj = {
         titulo:titulo,
